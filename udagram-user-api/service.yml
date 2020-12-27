@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: udagram-user
   labels:
-    run: udagram-user
+    app: udagram-user
 spec:
   ports:
   - port: 8080
     protocol: TCP
+    targetPort: 8080
   selector:
-    run: udagram-user
+    app: udagram-user
